@@ -22,10 +22,10 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "doctrine/doctrine-orm-module": ">=0.7.*",
-        "zf-commons/zfc-user": ">=0.1.*",
-        "zf-commons/zfc-user-doctrine-orm": ">=0.1.*",
-        "bjyoungblood/bjy-authorize": ">=1.2.*"
+        "doctrine/doctrine-orm-module": ">=0.7",
+        "zf-commons/zfc-user": ">=0.1",
+        "zf-commons/zfc-user-doctrine-orm": ">=0.1",
+        "bjyoungblood/bjy-authorize": ">=1.2"
     },
     "autoload": {
         "psr-0": {
