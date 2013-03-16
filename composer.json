@@ -1,0 +1,35 @@
+{
+    "name":         "manuakasam/sam-user",
+    "description":  "A simple useable module to quickly glue together ZfcUser, BjyAuthorize and Doctrine 2",
+    "type":         "library",
+    "license":      "BSD-3-Clause",
+    "homepage":     "https://github.com/bjyoungblood/BjyAuthorize",
+    "keywords": [
+        "zf2",
+        "zfc-user",
+        "bjy-authorize",
+        "doctrine-orm-module",
+        "doctrine"
+    ],
+    "authors": [
+        {
+            "name":      "Manuel Stosic",
+            "email":     "manuakasam@gmail.com",
+            "homepage":  "http://samminds.com/",
+            "role":      "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "doctrine/doctrine-orm-module": ">=0.7.*",
+        "zf-commons/zfc-user": ">=0.1.*",
+        "zf-commons/zfc-user-doctrine-orm": ">=0.1.*",
+        "bjyoungblood/bjy-authorize": ">=1.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "SamUser\\": "src/"
+        }
+    }
+}
