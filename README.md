@@ -1,9 +1,14 @@
 SamUser
 =======
 
-A simple Module that glues together ZfcUser, BjyAuthorize and Doctrine 2.
+**What is SamUser?**
 
-Authentication, Authorization and DB-Connectivity are core features for nearly every process. Setting up those three modules every single time is a little more time-consuming than it needs to be, therefore this module has been created.
+SamUser is a Module that acts like glue between ZfcUser, ZfcUserDoctrineORM and BjyAuthorize.
+Configuration for those three Modules - at least in my cases - are almost identical at all times. Since I am too lazy to copy paste stuff I created this Module.
+
+**What exactly does SamUser?**
+
+SamUser provides a very common Default-Configuration for the abovementioned Modules. It also provides the required Entities.
 
 Installation
 ============
@@ -18,13 +23,16 @@ Installation via composer is supported, simply add the following line to your ``
 Configuration
 =============
 
-This Module doesn't require lots of configuration. All that's needed is to set up a Connection for Doctrine. For this you can use the distribuntionable located inside ```SamUser/config```
+This Module doesn't require any special configuration. All that's needed is to set up a Connection for Doctrine. For this you can use the distribuntionable located inside ```SamUser/config```
+
+If you need to modify any behavior of the glued Modules, then simply use the DEFAULT Configuration Options from ZfcUser or BjyAuthorize ;)
 
 Dependencies
 ============
 
 This Module heavily depends on the following Modules and makes no sense without them:
 
+ - ZfcUser
  - DoctrineORMModule
  - ZfcUserDoctrineORM
  - BjyAuthorize
