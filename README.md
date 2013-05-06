@@ -20,6 +20,21 @@ Installation via composer is supported, simply add the following line to your ``
 }
 ```
 
+All that matters then is to load ```SamUser``` **after** ```ZfcUser``` and ```BjyAuthorize```. An example application configuration could look like the following:
+
+```
+'modules' => array(
+    'Application',
+    'DoctrineModule',
+    'DoctrineORMModule',
+    'ZfcBase',
+    'ZfcUser',
+    'ZfcUserDoctrineORM',
+    'BjyAuthorize',
+    'SamUser'             // Important to load after all ZfcUser, BjyAuthorize and their required modules!
+)
+```
+
 Configuration
 =============
 
