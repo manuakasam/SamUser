@@ -10,6 +10,11 @@ Configuration for those three Modules - at least in my cases - are almost identi
 
 SamUser provides a very common Default-Configuration for the abovementioned Modules. It also provides the required Entities.
 
+**What's the use again?**
+
+Nothing but helping out lazy people ;) You may want to check out my blogpost where i describe in detail how and why this module has been created
+>> http://samminds.com/2013/03/zfcuser-bjyauthorize-and-doctrine-working-together/
+
 Installation
 ============
 
