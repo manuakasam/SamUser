@@ -98,7 +98,7 @@ class Role implements HierarchicalRoleInterface
     /**
      * Set the parent role.
      *
-     * @param Role $role
+     * @param Role $parent
      *
      * @return void
      */
