@@ -230,6 +230,44 @@ class User implements UserInterface, ProviderInterface
      */
     public function addRole($role)
     {
-        $this->roles[] = $role;
+        $this->roles->add($role);
+    }
+    
+    /**
+     * Remove a role from the user.
+     *
+     * @param Role $role
+     *
+     * @return void
+     */
+    public function removeRole($role)
+    {
+        $this->roles->removeElement($role);
+    }
+    
+    /**
+     * Add roles to the user.
+     *
+     * @param Collection $roles
+     *
+     * @return void
+     */
+    public function addRoles($roles)
+    {
+        foreach ($roles as $role)
+            $this->roles->add($role);
+    }
+    
+    /**
+     * Remove roles from the user.
+     *
+     * @param Collection $roles
+     *
+     * @return void
+     */
+    public function removeRoles($roles)
+    {
+        foreach ($roles as $role)
+            $this->roles->removeElement($role);
     }
 }
