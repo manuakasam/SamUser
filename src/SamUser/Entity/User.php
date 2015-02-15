@@ -10,6 +10,7 @@ namespace SamUser\Entity;
 
 use BjyAuthorize\Provider\Role\ProviderInterface;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ZfcUser\Entity\UserInterface;
 
@@ -252,7 +253,7 @@ class User implements UserInterface, ProviderInterface
      *
      * @return void
      */
-    public function addRoles($roles)
+    public function addRoles(Collection $roles)
     {
         foreach ($roles as $role)
             $this->roles->add($role);
@@ -265,7 +266,7 @@ class User implements UserInterface, ProviderInterface
      *
      * @return void
      */
-    public function removeRoles($roles)
+    public function removeRoles(Collection $roles)
     {
         foreach ($roles as $role)
             $this->roles->removeElement($role);
