@@ -10,6 +10,7 @@ namespace SamUser\Entity;
 
 use BjyAuthorize\Provider\Role\ProviderInterface;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ZfcUser\Entity\UserInterface;
 
@@ -93,8 +94,6 @@ class User implements UserInterface, ProviderInterface
      * Set id.
      *
      * @param int $id
-     *
-     * @return void
      */
     public function setId($id)
     {
@@ -115,8 +114,6 @@ class User implements UserInterface, ProviderInterface
      * Set username.
      *
      * @param string $username
-     *
-     * @return void
      */
     public function setUsername($username)
     {
@@ -137,8 +134,6 @@ class User implements UserInterface, ProviderInterface
      * Set email.
      *
      * @param string $email
-     *
-     * @return void
      */
     public function setEmail($email)
     {
@@ -159,8 +154,6 @@ class User implements UserInterface, ProviderInterface
      * Set displayName.
      *
      * @param string $displayName
-     *
-     * @return void
      */
     public function setDisplayName($displayName)
     {
@@ -181,8 +174,6 @@ class User implements UserInterface, ProviderInterface
      * Set password.
      *
      * @param string $password
-     *
-     * @return void
      */
     public function setPassword($password)
     {
@@ -203,8 +194,6 @@ class User implements UserInterface, ProviderInterface
      * Set state.
      *
      * @param int $state
-     *
-     * @return void
      */
     public function setState($state)
     {
@@ -225,11 +214,43 @@ class User implements UserInterface, ProviderInterface
      * Add a role to the user.
      *
      * @param Role $role
-     *
-     * @return void
      */
     public function addRole($role)
     {
-        $this->roles[] = $role;
+        $this->roles->add($role);
+    }
+    
+    /**
+     * Remove a role from the user.
+     *
+     * @param Role $role
+     */
+    public function removeRole($role)
+    {
+        $this->roles->removeElement($role);
+    }
+    
+    /**
+     * Add roles to the user.
+     *
+     * @param Collection $roles
+     */
+    public function addRoles(Collection $roles)
+    {
+        foreach ($roles as $role) {
+            $this->roles->add($role);
+        }
+    }
+    
+    /**
+     * Remove roles from the user.
+     *
+     * @param Collection $roles
+     */
+    public function removeRoles(Collection $roles)
+    {
+        foreach ($roles as $role) {
+            $this->roles->removeElement($role);
+        }
     }
 }
