@@ -94,8 +94,6 @@ class User implements UserInterface, ProviderInterface
      * Set id.
      *
      * @param int $id
-     *
-     * @return void
      */
     public function setId($id)
     {
@@ -116,8 +114,6 @@ class User implements UserInterface, ProviderInterface
      * Set username.
      *
      * @param string $username
-     *
-     * @return void
      */
     public function setUsername($username)
     {
@@ -138,8 +134,6 @@ class User implements UserInterface, ProviderInterface
      * Set email.
      *
      * @param string $email
-     *
-     * @return void
      */
     public function setEmail($email)
     {
@@ -160,8 +154,6 @@ class User implements UserInterface, ProviderInterface
      * Set displayName.
      *
      * @param string $displayName
-     *
-     * @return void
      */
     public function setDisplayName($displayName)
     {
@@ -182,8 +174,6 @@ class User implements UserInterface, ProviderInterface
      * Set password.
      *
      * @param string $password
-     *
-     * @return void
      */
     public function setPassword($password)
     {
@@ -204,8 +194,6 @@ class User implements UserInterface, ProviderInterface
      * Set state.
      *
      * @param int $state
-     *
-     * @return void
      */
     public function setState($state)
     {
@@ -226,8 +214,6 @@ class User implements UserInterface, ProviderInterface
      * Add a role to the user.
      *
      * @param Role $role
-     *
-     * @return void
      */
     public function addRole($role)
     {
@@ -238,8 +224,6 @@ class User implements UserInterface, ProviderInterface
      * Remove a role from the user.
      *
      * @param Role $role
-     *
-     * @return void
      */
     public function removeRole($role)
     {
@@ -250,25 +234,23 @@ class User implements UserInterface, ProviderInterface
      * Add roles to the user.
      *
      * @param Collection $roles
-     *
-     * @return void
      */
     public function addRoles(Collection $roles)
     {
-        foreach ($roles as $role)
+        foreach ($roles as $role) {
             $this->roles->add($role);
+        }
     }
     
     /**
      * Remove roles from the user.
      *
      * @param Collection $roles
-     *
-     * @return void
      */
     public function removeRoles(Collection $roles)
     {
-        foreach ($roles as $role)
+        foreach ($roles as $role) {
             $this->roles->removeElement($role);
+        }
     }
 }
